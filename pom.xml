@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+ Copyright (C) 2015 eXo Platform SAS.
+
+ This is free software; you can redistribute it and/or modify it
+ under the terms of the GNU Lesser General Public License as
+ published by the Free Software Foundation; either version 2.1 of
+ the License, or (at your option) any later version.
+
+ This software is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ Lesser General Public License for more details.
+
+ You should have received a copy of the GNU Lesser General Public
+ License along with this software; if not, write to the Free
+ Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA
+ 02110-1301 USA, or see the FSF site: http://www.fsf.org.
+
+-->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>org.exoplatform.addons</groupId>
+    <artifactId>addons-parent-pom</artifactId>
+    <version>6-SNAPSHOT</version>
+  </parent>
+  <groupId>org.exoplatform.addons.es.sample</groupId>
+  <artifactId>sample-elastic-parent</artifactId>
+  <version>1.0.x-SNAPSHOT</version>
+  <packaging>pom</packaging>
+  <name>Sample elastic parent POM</name>
+  <description>Sample Elastic add-on parent POM</description>
+
+  <scm>
+    <connection>scm:git:git@github.com:thibaultclem/sample-elastic-addon.git</connection>
+    <developerConnection>scm:git:git@github.com:thibaultclem/sample-elastic-addon.git</developerConnection>
+    <url>https://github.com/thibaultclem/sample-elastic-addon</url>
+    <tag>HEAD</tag>
+  </scm>
+
+  <modules>
+    <module>packaging</module>
+    <module>webapp</module>
+  </modules>
+
+  <properties>
+    <maven.compiler.target>1.7</maven.compiler.target>
+    <maven.compiler.source>1.7</maven.compiler.source>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+    <org.exoplatform.depmgt.version>11-SNAPSHOT</org.exoplatform.depmgt.version>
+    <platform.version>4.3.x-SNAPSHOT</platform.version>
+    <exo-es-search.version>1.0.x-SNAPSHOT</exo-es-search.version>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.exoplatform.addons.es</groupId>
+      <artifactId>exo-es-search-service</artifactId>
+      <version>${exo-es-search.version}</version>
+      <type>jar</type>
+    </dependency>
+  </dependencies>
+
+  </project>
